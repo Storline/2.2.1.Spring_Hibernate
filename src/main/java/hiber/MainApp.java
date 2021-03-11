@@ -22,14 +22,13 @@ public class MainApp {
       Car car = new Car("DMV", 70);
       Car car2 = new Car("AUEDI", 228);
 
-//      car.setUser(user1);
-//      car2.setUser(user2);
       user1.setCar(car);
       user2.setCar(car2);
 
       userService.add(user1);
       userService.add(user2);
 
+      System.out.println(userService.getUserByCar("DMV", 70).toString());
 
       List<User> users = userService.listUsers();
       for (User user : users) {
